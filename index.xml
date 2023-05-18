@@ -1,10 +1,128 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wii U . Guide</title>
+    <title>Wii U Homebrew Guide</title>
     <link>https://thegamershollow.github.io/wiiu.guide/</link>
-    <description>Recent content on Wii U . Guide</description>
+    <description>Recent content on Wii U Homebrew Guide</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://thegamershollow.github.io/wiiu.guide/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="https://thegamershollow.github.io/wiiu.guide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sd Prep</title>
+      <link>https://thegamershollow.github.io/wiiu.guide/user-guide/installing-the-jailbreak/sd-prep/</link>
+      <pubDate>Thu, 18 May 2023 12:12:44 +0000</pubDate>
+      
+      <guid>https://thegamershollow.github.io/wiiu.guide/user-guide/installing-the-jailbreak/sd-prep/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Homebrew</title>
+      <link>https://thegamershollow.github.io/wiiu.guide/user-guide/introduction/homebrew/</link>
+      <pubDate>Thu, 18 May 2023 12:07:54 +0000</pubDate>
+      
+      <guid>https://thegamershollow.github.io/wiiu.guide/user-guide/introduction/homebrew/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Browser Exploit</title>
+      <link>https://thegamershollow.github.io/wiiu.guide/user-guide/installing-the-jailbreak/browser-exploit/</link>
+      <pubDate>Thu, 18 May 2023 12:12:56 +0000</pubDate>
+      
+      <guid>https://thegamershollow.github.io/wiiu.guide/user-guide/installing-the-jailbreak/browser-exploit/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Custom Firmware</title>
+      <link>https://thegamershollow.github.io/wiiu.guide/user-guide/introduction/cfw/</link>
+      <pubDate>Thu, 18 May 2023 12:08:01 +0000</pubDate>
+      
+      <guid>https://thegamershollow.github.io/wiiu.guide/user-guide/introduction/cfw/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Nand Backup</title>
+      <link>https://thegamershollow.github.io/wiiu.guide/user-guide/installing-the-jailbreak/nand-backup/</link>
+      <pubDate>Thu, 18 May 2023 12:13:12 +0000</pubDate>
+      
+      <guid>https://thegamershollow.github.io/wiiu.guide/user-guide/installing-the-jailbreak/nand-backup/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Homebrew and Custom Firmware Uses</title>
+      <link>https://thegamershollow.github.io/wiiu.guide/user-guide/introduction/hb-cfw-uses/</link>
+      <pubDate>Thu, 18 May 2023 12:08:17 +0000</pubDate>
+      
+      <guid>https://thegamershollow.github.io/wiiu.guide/user-guide/introduction/hb-cfw-uses/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Installing the PayloadLoader</title>
+      <link>https://thegamershollow.github.io/wiiu.guide/user-guide/installing-the-jailbreak/install-payloadloader/</link>
+      <pubDate>Thu, 18 May 2023 12:13:29 +0000</pubDate>
+      
+      <guid>https://thegamershollow.github.io/wiiu.guide/user-guide/installing-the-jailbreak/install-payloadloader/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>End Goal</title>
+      <link>https://thegamershollow.github.io/wiiu.guide/user-guide/introduction/end-goal/</link>
+      <pubDate>Thu, 18 May 2023 12:08:30 +0000</pubDate>
+      
+      <guid>https://thegamershollow.github.io/wiiu.guide/user-guide/introduction/end-goal/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Autobooting Aroma</title>
+      <link>https://thegamershollow.github.io/wiiu.guide/user-guide/installing-the-jailbreak/autobooting/</link>
+      <pubDate>Thu, 18 May 2023 12:13:46 +0000</pubDate>
+      
+      <guid>https://thegamershollow.github.io/wiiu.guide/user-guide/installing-the-jailbreak/autobooting/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Before Starting</title>
+      <link>https://thegamershollow.github.io/wiiu.guide/user-guide/introduction/before-starting/</link>
+      <pubDate>Thu, 18 May 2023 12:08:40 +0000</pubDate>
+      
+      <guid>https://thegamershollow.github.io/wiiu.guide/user-guide/introduction/before-starting/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Finalizing Setup</title>
+      <link>https://thegamershollow.github.io/wiiu.guide/user-guide/installing-the-jailbreak/finalizing-setup/</link>
+      <pubDate>Thu, 18 May 2023 12:14:06 +0000</pubDate>
+      
+      <guid>https://thegamershollow.github.io/wiiu.guide/user-guide/installing-the-jailbreak/finalizing-setup/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Nand Backup</title>
+      <link>https://thegamershollow.github.io/wiiu.guide/vwii/vwii-modding/nand-backup/</link>
+      <pubDate>Thu, 18 May 2023 12:16:33 +0000</pubDate>
+      
+      <guid>https://thegamershollow.github.io/wiiu.guide/vwii/vwii-modding/nand-backup/</guid>
+      <description>Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://thegamershollow.github.io/wiiu.guide/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thegamershollow.github.io/wiiu.guide/search/</guid>
+      <description> </description>
+    </item>
+    
   </channel>
 </rss>

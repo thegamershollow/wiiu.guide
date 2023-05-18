@@ -3,11 +3,11 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Categories - Wii U Homebrew Guide</title>
+<title>Search - Wii U Homebrew Guide</title>
 <meta name="description" content="A in-depth guide for Wii U Homebrew, to bring your Wii U from stock to Aroma custom firmware.">
 <meta name="generator" content="Hugo 0.110.0">
 <link href="https://thegamershollow.github.io/wiiu.guide//index.xml" rel="alternate" type="application/rss+xml">
-<link rel="canonical" href="https://thegamershollow.github.io/wiiu.guide/categories/">
+<link rel="canonical" href="https://thegamershollow.github.io/wiiu.guide/search/">
 <link rel="stylesheet" href="https://thegamershollow.github.io/wiiu.guide/css/theme.min.css">
 <link rel="stylesheet" href="https://thegamershollow.github.io/wiiu.guide/css/chroma.min.css">
 <script defer src="https://thegamershollow.github.io/wiiu.guide//js/fontawesome6/all.min.js"></script>
@@ -25,17 +25,22 @@
 <style>
 :root {}
 </style>
-<meta property="og:title" content="Categories" />
-<meta property="og:description" content="A in-depth guide for Wii U Homebrew, to bring your Wii U from stock to Aroma custom firmware." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://thegamershollow.github.io/wiiu.guide/categories/" /><meta property="og:image" content="https://thegamershollow.github.io/wiiu.guide/images/og-image.png"/><meta property="og:site_name" content="Hugo Techdoc Theme" />
+<meta property="og:title" content="Search" />
+<meta property="og:description" content=" " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://thegamershollow.github.io/wiiu.guide/search/" /><meta property="og:image" content="https://thegamershollow.github.io/wiiu.guide/images/og-image.png"/><meta property="article:section" content="" />
+
+<meta property="og:site_name" content="Hugo Techdoc Theme" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://thegamershollow.github.io/wiiu.guide/images/og-image.png"/>
 
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content="A in-depth guide for Wii U Homebrew, to bring your Wii U from stock to Aroma custom firmware."/>
-<meta itemprop="name" content="Categories">
-<meta itemprop="description" content="A in-depth guide for Wii U Homebrew, to bring your Wii U from stock to Aroma custom firmware."></head>
+<meta name="twitter:title" content="Search"/>
+<meta name="twitter:description" content=" "/>
+<meta itemprop="name" content="Search">
+<meta itemprop="description" content=" ">
+
+<meta itemprop="wordCount" content="0"><meta itemprop="image" content="https://thegamershollow.github.io/wiiu.guide/images/og-image.png"/>
+<meta itemprop="keywords" content="" /></head>
 <body><div class="container"><header>
 <h1>Wii U Homebrew Guide</h1><a href="https://github.com/thegamershollow/wiiu.guide-source" class="github"><i class="fab fa-github"></i></a>
 <p class="description">A in-depth guide for Wii U Homebrew, to bring your Wii U from stock to Aroma custom firmware.</p>
@@ -50,9 +55,69 @@
 </div>
 
 <div class="content-container">
-<main><h1>Categories</h1><div class="edit-meta">
+<main><h1>Search</h1>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js" integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js" integrity="sha256-6S7q0JJs/Kx4kb/fv0oMjS855QTz5Rc2hh9AkIUjUsk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 
-<br></div><nav class="pagination"><a class="nav nav-next" href="https://thegamershollow.github.io/wiiu.guide/user-guide/" title="User Guide">Next - User Guide <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<div id="searchbox"></div>
+<div id="stats"></div>
+<div id="hits"></div>
+<div id="pagination"></div>
+
+<script>
+var search = instantsearch({
+  indexName: 'wiiu.guide',
+  searchClient: algoliasearch(
+    'GP95PT584N',
+    '4e59cce9306882b3a5cf7d3a252c703c'
+  ),
+  routing: true,
+});
+
+const renderHits = (renderOptions, isFirstRender) => {
+  const { hits } = renderOptions;
+
+  document.querySelector('#hits').innerHTML = `
+    ${hits
+      .map(
+        item =>
+          `<div class="ais-Hits-item"><h3><a href="${ item.permalink }">${ item.title }</a></h3><p><span class="lastmod">${ dayjs(item.lastmod).format("YYYY/MM/DD") }</span> - ${ item.description ? item.description : item.content.length > 200 ? item.content.substring( 0, 200 ) + '...' : item.content }</p></div>`
+      )
+      .join('')}
+  `;
+};
+
+const customHits = instantsearch.connectors.connectHits( renderHits );
+
+search.addWidgets([
+  instantsearch.widgets.searchBox({
+    container: '#searchbox',
+    showReset: false,
+  }),
+
+  instantsearch.widgets.stats({
+    container: '#stats',
+  }),
+
+  customHits({
+    container: document.querySelector('#hits'),
+  }),
+
+  instantsearch.widgets.pagination({
+    container: '#pagination',
+    maxPages: 20,
+  })
+]);
+
+search.start();
+
+</script>
+
+
+<div class="edit-meta">
+
+<br><a href="https://github.com/thegamershollow/wiiu.guide-source/edit/master/search.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-next" href="https://thegamershollow.github.io/wiiu.guide/user-guide/" title="User Guide">Next - User Guide <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
 </main>
